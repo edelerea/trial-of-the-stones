@@ -16,7 +16,7 @@ button3_xpath_locator = "//button[@id='r3Butn']"
 merch1_xpath_locator = "//b[text()='Jessica']/../../p]"
 merch2_xpath_locator = "//b[text()='Bernard']/../../p]"
 button_check_xpath_locator = "//button[@id='checkButn']"
-complete_banner_xpath_locator = "//div[@id='trialCompleteBanner']/h4"
+complete_banner_id_locator = "trialCompleteBanner"
 
 # Assign elements
 
@@ -28,7 +28,7 @@ button2_click = browser.find_element_by_xpath(button2_xpath_locator)
 input3_element = browser.find_element_by_css_selector(input3_css_locator)
 button3_click = browser.find_element_by_xpath(button3_xpath_locator)
 button_check_click = browser.find_element_by_xpath(button_check_xpath_locator)
-complete_sign = browser.find_element_by_xpath(complete_banner_xpath_locator)
+complete_sign = browser.find_element_by_id(complete_banner_id_locator)
 
 # Manipulate elements
 
@@ -47,4 +47,5 @@ button_check_click.click()
 
 # Result visualisation
 
+assert "Trial Complete" == complete_sign.text
 print(str(complete_sign.text))
