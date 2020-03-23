@@ -36,12 +36,14 @@ input1_element.send_keys("rock")
 button1_click.click()
 input2_element.send_keys(str(password_element.text))
 button2_click.click()
+
 if merch1_xpath_locator > merch2_xpath_locator:
     jess = "Jessica"
     input3_element.send_keys(jess)
 else:
     bern = "Bernard"
     input3_element.send_keys(bern)
+    
 button3_click.click()
 button_check_click.click()
 
